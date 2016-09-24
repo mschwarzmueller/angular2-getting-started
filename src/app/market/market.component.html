@@ -1,10 +1,10 @@
 <div class="row">
   <div class="col-xs-12">
     <ul class="list-group">
-      <li class="list-group-item">
-        <span class="badge">Photo</span>
-        <button class="btn btn-success">Add to Collection</button>&nbsp;
-        Anything
+      <li class="list-group-item" *ngFor="let item of collectables">
+        <span class="badge">{{ item.type }}</span>
+        <button class="btn btn-success" (click)="onAddToCollection()">Add to Collection</button>&nbsp;
+        {{ item.description }}
       </li>
     </ul>
   </div>
